@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+	<head>
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<title>Mod1 Assignment</title>
+	</head>
+	<body ng-controller="LunchCheckController">
+		<h1>Am I eating too much?</h1>
+		<div>
+			<p>Please provide a comma-separated list of your lunch items.</p>
+			<input ng-model="list" style="border-color: {{ borderColor }};" />
+			* Empty items do not count towards the final result.
+			<br>
+			<button ng-click="lunchCheck();">Check If Too Much</button>
+		</div>
+		<div>
+			<p style="color: {{ fontColor }};">{{ status }}</p>
+		</div>
+	</body>
+</html>
