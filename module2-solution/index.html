@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListCheckOff">
+	<head>
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<title>Mod2 Assignment</title>
+	</head>
+	<body>
+		<h1>Checkoff Shopping List</h1>
+		<div ng-controller="ToBuyShoppingController as TBList" style="width: 35%; float: left;">
+			<h2>To Buy:</h2>
+			<p ng-if="TBList.items.length == 0" style="color: green;">Everything is bought!</p>
+			<ul>
+				<li ng-repeat="item in TBList.items">
+					Buy {{ item.quantity }} {{ item.name }}
+					<button ng-click="TBList.checkOff($index);">Bought</button>
+				</li>
+			</ul>
+		</div>
+		<div ng-controller="AlreadyBoughtShoppingController as BList" style="width: 65%; float: right;">
+			<h2>Already Bought:</h2>
+			<p ng-if="BList.items.length == 0" style="color: red;">Nothing bought yet</p>
+			<ul>
+				<li ng-repeat="item in BList.items">
+					Bought {{ item.quantity }} {{ item.name }}
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
