@@ -29,9 +29,9 @@ function boughtController(ShoppingListCheckOffService) {
 function listService() {
 	var service = this;
 
-	var unboughtItems = [{ name: "cookies", quantity: 10 }, { name: "cookies", quantity: 10 },
-						{ name: "cookies", quantity: 10 }, { name: "cookies", quantity: 10 },
-						{ name: "cookies", quantity: 10 }];
+	var unboughtItems = [{ name: "cookies", quantity: 10 }, { name: "cookies", quantity: 20 },
+						{ name: "cookies", quantity: 30 }, { name: "cookies", quantity: 40 },
+						{ name: "cookies", quantity: 50 }];
 	var boughtItems = [];
 
 	service.checkOffItem = function (itemIndex) {
