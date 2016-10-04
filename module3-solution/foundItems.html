@@ -1,0 +1,13 @@
+<div ng-if="status == 'noResult'">Nothing found</div>
+<div>
+  <ul>
+    <li ng-repeat="item in items">
+      {{ item.name }}
+      <ul>
+        <li>Short name: {{ item.short_name }}</li>
+        <li>Description: {{ item.description }}</li>
+      </ul>
+      <button class="btn btn-danger aligned-button" ng-click="onRemove({index: $index});">Don't want this one!</button>
+    </li>
+  </ul>
+</div>
