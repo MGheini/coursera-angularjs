@@ -18,9 +18,10 @@ function narrowerController(MenuSearchService) {
 	narrower.status = "";
 
 	narrower.getMatchedMenuItems = function() {
-		if(narrower.searchTerm === "")
+		if(narrower.searchTerm === "") {
 			narrower.found = [];
 			narrower.status = "noResult";
+		}
 		else {
 			MenuSearchService.getMatchedMenuItems(narrower.searchTerm).then(function(result) {
 				narrower.found = result;
